@@ -7,15 +7,18 @@ use `npm start` to start express sever
 
 ### movie
 Input:
-```{
+```
+{
   movie(id: 3) {
     name
     id
     year
   }
-}```
+}
+```
 Output:
-```{
+```
+{
   "data": {
     "movie": {
       "name": "Movie 3",
@@ -23,11 +26,13 @@ Output:
       "year": 2016
     }
   }
-}```
+}
+```
 
 ### director
 Input:
-```{
+```
+{
   director(id: 1) {
     name
     id,
@@ -40,7 +45,8 @@ Input:
 }
 ```
 Output:
-```{
+```
+{
   "data": {
     "director": {
       "name": "Director 1",
@@ -58,4 +64,5 @@ Output:
       ]
     }
   }
-}```
+}
+```
