@@ -1,5 +1,13 @@
 
-const { GraphQLObjectType, GraphQLString } = require('graphql');
+const { GraphQLObjectType, 
+  GraphQLString, 
+  GraphQLInt 
+} = require('graphql');
+
+const _ = require('lodash');
+
+const {movieType} = require('./types.js');
+let {movies} = require('./data.js');
 
 // define the query
 const queryType = new GraphQLObjectType({
@@ -15,6 +23,15 @@ const queryType = new GraphQLObjectType({
       type: GraphQLString,
       resolve: function () {
         return "World Hello";
+      }
+    },
+    movie: {
+      type: movieType,
+      args: {
+        id: { type: GraphQLInt }
+      },
+      resolve: function (source, args) {
+        return _.find(movies, { id: args.id });
       }
     }
   }
