@@ -1,12 +1,16 @@
 const {
-  GraphQLObjecType,
+  GraphQLObjectType,
   GraphQLID,
   GraphQLString,
-  GraphQLInt
+  GraphQLInt,
+  GraphQLList
 } = require('graphql');
+const _ = require('lodash');
+
+let {movies} = require('./data.js')
 
 // define movieType
-movieType = new GraphQLObjecType({
+movieType = new GraphQLObjectType({
   name: 'Movie',
   fields: {
     id: { type: GraphQLID },
@@ -16,4 +20,20 @@ movieType = new GraphQLObjecType({
   }
 });
 
+directorType = new GraphQLObjectType({
+  name: 'Director',
+  fields: {
+    id: { type: GraphQLID },
+    name: { type: GraphQLString },
+    age: { type: GraphQLInt },
+    movies: {
+      type: new GraphQLList(movieType),
+      resolve(source, args) {
+        return _.filter(movies, { directorId: source.id });
+      }
+    }
+  }
+});
+
 exports.movieType = movieType;
+exports.directorType = directorType;
