@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/digitallysavvy/graphql-with-nodejs/issues"
   },
-  "homepage": "https://github.com/digitallysavvy/graphql-with-nodejs#readme"
+  "homepage": "https://github.com/digitallysavvy/graphql-with-nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1"
+  }
 }
