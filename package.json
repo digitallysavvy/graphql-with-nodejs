@@ -1,0 +1,23 @@
+{
+  "name": "graphql-with-nodejs",
+  "version": "1.0.0",
+  "description": "intro to graphql",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/digitallysavvy/graphql-with-nodejs.git"
+  },
+  "keywords": [
+    "graphql",
+    "node"
+  ],
+  "author": "digitallysavvy",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/digitallysavvy/graphql-with-nodejs/issues"
+  },
+  "homepage": "https://github.com/digitallysavvy/graphql-with-nodejs#readme"
+}
